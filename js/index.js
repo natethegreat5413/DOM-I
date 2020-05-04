@@ -113,7 +113,10 @@ contactP[2].textContent = siteContent['contact']['email']
 
 
 
+/**************FOOTER***************/
 
+const footer = document.querySelectorAll('footer p')
+footer[0].textContent = siteContent['footer']['copyright']
 
 
 
