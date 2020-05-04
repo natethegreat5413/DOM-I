@@ -72,6 +72,7 @@ logoImg.setAttribute('src', siteContent['nav']['img-src'])
 
 const title = document.querySelector('h1')
 title.textContent = siteContent['cta']['h1']
+title.style.color = 'slategray'
 
 const button = document.querySelector('button')
 button.textContent = siteContent['cta']['button']
@@ -91,6 +92,9 @@ h4s[3].textContent = siteContent['main-content']['product-h4'];
 h4s[4].textContent = siteContent['main-content']['vision-h4'];
 h4s[5].textContent = siteContent['contact']['contact-h4'];
 
+h4s.forEach(element => {
+  element.style.color = '#FFA07A'
+})
 
 const middleImg = document.getElementById('middle-img')
 middleImg.setAttribute('src', siteContent['main-content']['middle-img-src'])
@@ -103,6 +107,9 @@ mainP[2].textContent = siteContent['main-content']['services-content']
 mainP[3].textContent = siteContent['main-content']['product-content']
 mainP[4].textContent = siteContent['main-content']['vision-content']
 
+mainP.forEach(element => {
+  element.style.color = 'chocolate'
+})
 
 /***************CONTACT*************/
 
@@ -110,6 +117,10 @@ const contactP = document.querySelectorAll('.contact p')
 contactP[0].textContent = siteContent['contact']['address']
 contactP[1].textContent = siteContent['contact']['phone']
 contactP[2].textContent = siteContent['contact']['email']
+
+contactP.forEach(element => {
+  element.style.color = 'chocolate'
+})
 
 
 
@@ -119,4 +130,7 @@ const footer = document.querySelectorAll('footer p')
 footer[0].textContent = siteContent['footer']['copyright']
 
 
+/**********EXTRA*******/
 
+// const contentCards = document.querySelectorAll('.text-content');
+// contentCards.style.box-shadow = '-1px 0 5px 0 rgba(0, 0, 0, .5)'
