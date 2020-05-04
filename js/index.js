@@ -38,5 +38,99 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+// let logo = document.getElementById("logo-img");
+// logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+/****************NAVIGATION***************/
+
+let nav1 = document.querySelectorAll('nav a')
+nav1.forEach((value, index) => {
+  value.textContent = siteContent.nav[`nav-item-${index + 1}`];
+});
+
+nav1.forEach((element) => {
+  element.style.color = 'green'
+});
+
+const newLink = document.createElement('a')
+newLink.innerHTML = 'MyLink';
+document.querySelector('nav').appendChild(newLink)
+newLink.style.color = 'green'
+
+const newLink2 = document.createElement('a')
+newLink2.innerHTML = 'DOM',
+document.querySelector('nav').appendChild(newLink2)
+newLink2.style.color = 'green'
+
+const logoImg = document.getElementById('logo-img');
+logoImg.setAttribute('src', siteContent['nav']['img-src'])  
+
+
+
+
+/**********CTA**********/
+
+const title = document.querySelector('h1')
+title.textContent = siteContent['cta']['h1']
+title.style.color = 'slategray'
+
+const button = document.querySelector('button')
+button.textContent = siteContent['cta']['button']
+
+const ctaImg = document.getElementById('cta-img')
+ctaImg.setAttribute('src', siteContent['cta']['img-src'])
+
+
+
+/***********MAIN-CONTENT**********/
+
+const h4s = document.querySelectorAll('h4');
+h4s[0].textContent = siteContent['main-content']['features-h4'];
+h4s[1].textContent = siteContent['main-content']['about-h4'];
+h4s[2].textContent = siteContent['main-content']['services-h4'];
+h4s[3].textContent = siteContent['main-content']['product-h4'];
+h4s[4].textContent = siteContent['main-content']['vision-h4'];
+h4s[5].textContent = siteContent['contact']['contact-h4'];
+
+h4s.forEach(element => {
+  element.style.color = '#FFA07A'
+})
+
+const middleImg = document.getElementById('middle-img')
+middleImg.setAttribute('src', siteContent['main-content']['middle-img-src'])
+
+
+const mainP = document.querySelectorAll('.main-content p')
+mainP[0].textContent = siteContent['main-content']['features-content']
+mainP[1].textContent = siteContent['main-content']['about-content']
+mainP[2].textContent = siteContent['main-content']['services-content']
+mainP[3].textContent = siteContent['main-content']['product-content']
+mainP[4].textContent = siteContent['main-content']['vision-content']
+
+mainP.forEach(element => {
+  element.style.color = 'chocolate'
+})
+
+/***************CONTACT*************/
+
+const contactP = document.querySelectorAll('.contact p')
+contactP[0].textContent = siteContent['contact']['address']
+contactP[1].textContent = siteContent['contact']['phone']
+contactP[2].textContent = siteContent['contact']['email']
+
+contactP.forEach(element => {
+  element.style.color = 'chocolate'
+})
+
+
+
+/**************FOOTER***************/
+
+const footer = document.querySelectorAll('footer p')
+footer[0].textContent = siteContent['footer']['copyright']
+
+
+/**********EXTRA*******/
+
+// const contentCards = document.querySelectorAll('.text-content');
+// contentCards.style.box-shadow = '-1px 0 5px 0 rgba(0, 0, 0, .5)'
